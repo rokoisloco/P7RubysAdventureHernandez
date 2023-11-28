@@ -2,14 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class Projectile2 : MonoBehaviour
 {
-    // Start is called before the first frame update
-
     Rigidbody2D rigidbody2d;
-    void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 
     public void Launch(Vector2 direction, float force)
@@ -17,23 +22,9 @@ public class Projectile : MonoBehaviour
         rigidbody2d.AddForce(direction * force);
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if(transform.position.magnitude > 1000.0f)
-        {
-            Destroy(gameObject);
-        }
-    }
-    void OnCollisionEnter2D(Collision2D othert)
-    {
-        EnemyController e = other.collider.GetComponent<EnemyController>();
-        if(e != null)
-        {
-            e.Fix();
-        }
-
+        Debug.Log("Projectile Collision with " + other.gameObject);
         Destroy(gameObject);
-
     }
 }

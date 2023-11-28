@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 9049632447056774955}
   - component: {fileID: 4962189275772104908}
   - component: {fileID: 5295521242702265560}
-  - component: {fileID: -3466874827691919280}
   m_Layer: 0
-  m_Name: projectilePrefab
+  m_Name: CogBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,7 +122,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.27, y: 0.97}
+    oldSize: {x: 0.75666666, y: 0.32333332}
     newSize: {x: 2.27, y: 0.97}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -159,15 +158,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-3466874827691919280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6935526112511107640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f87b3543444c6be41b60e7fcd25c306b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
